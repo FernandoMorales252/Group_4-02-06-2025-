@@ -27,7 +27,19 @@ public class Main {
 
             System.out.print("Departamento: ");
             String departamento = scanner.nextLine();
+        
+            System.out.print("Salario: ");
+            double salario = scanner.nextDouble();
 
+            Empleado emp = new Empleado(id, nombre, apellido, departamento, salario);
+            empleados.add(emp);
+
+            scanner.nextLine(); // Limpiar buffer
+
+            System.out.print("¿Desea agregar otro empleado? (s/n): ");
+            continuar = scanner.nextLine();
+
+        } while (continuar.equalsIgnoreCase("s"));
 
 
 
