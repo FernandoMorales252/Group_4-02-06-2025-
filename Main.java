@@ -40,9 +40,18 @@ public class Main {
             continuar = scanner.nextLine();
 
         } while (continuar.equalsIgnoreCase("s"));
+        System.out.println("\nLista de empleados registrados:");
 
+        Iterator<Empleado> iterador = empleados.iterator();
+        while (iterador.hasNext()) {
+            Empleado e = iterador.next();
+            System.out.println(e);
+        }
 
-
+        scanner.close();
     }
-    
 }
+
+
+
+    
